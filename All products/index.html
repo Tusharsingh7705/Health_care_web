@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+       
+</head>
+<body>
+    <div id="navContainer"> </div>  
+    <div id="categories">
+        <div class="items">
+            <a href="#" role="button" class="hair">Hair</a>
+        </div>
+        <div class="items">
+            <a href="#" role="button" class="skin" >Skin</a>
+        </div>
+        <div class="items">
+            <a href="#" role="button" class="weight">Weight</a>
+        </div>
+        <div class="items">
+            <a href="#" role="button" class="pcos">PCOS</a>
+        </div>
+        <div class="items">
+            <a href="#" role="button" class="care">Feminine Care</a>
+        </div>
+
+    </div>
+    <div id="append"></div>
+    <div id="hairDiv"></div>
+    <div id="weightDiv"></div>
+    <div id="pcosDiv"></div>
+    <div id="feminineDiv"></div>
+
+
+    <div id="footer_container">
+        <div class="box1">  
+            <div id="box2">      
+                <div id="box3"> 
+                    <div>
+                <img id="image" style="width:30%" src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_800,c_limit/v1606295435/staging/Home/Images/bodywise-logo.png" alt="bebodywise">
+            </div>
+            <ul id="prod" id="ul">
+                <li id="list">
+                    <a href="/All products/index.html">Hair</a>
+                </li>
+
+                <li id="list">
+                    <a href="/All products/index.html">Skin</a>
+                </li>
+
+                <li id="list">
+                    <a href="/All products/index.html">Nutrition</a>
+                </li>
+            </ul>
+
+            <ul id="prod1" id="ul">
+                <li id="list">
+                    <a href="/All products/index.html">PCOS</a>
+                </li>
+
+                <li id="list">
+                    <a href="/All products/index.html">Intimate Care</a>
+                </li>
+
+                <li id="list">
+                    <a href="/All products/index.html">Blog</a>
+                </li>
+            </ul>
+    </div>
+
+    <!-- 2nd part -->
+    <div id="about">
+        <ul id="ul">
+            <li id="list"><a href="/Home/index.html">Contact Us</a></li>
+            <li id="list"><a href="/Home/index.html">About Us</a></li>
+        </ul>
+
+        <ul id="ul">
+            <li id="list"><a href="">FAQs</a></li>
+            <li id="list"><a href="">Returns&Refunds</a></li>
+        </ul>
+    </div>
+
+    <!-- 3rd part -->
+    <div id="add">
+        <div id="add1">
+            <ul id="r1" class="ul">
+                    <li id="list"><a href=""><img id="image" src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_50,c_limit/v1603435299/staging/Home/Images/insta.png" alt=""/> </a></li>
+                    <li id="list"><a href=""><img id="image" src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_50,c_limit/v1603435299/staging/Home/Images/fb.png" alt=""/> </a></li>
+                    <li id="list"><a href=""><img id="image" src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_50,c_limit/v1603435299/staging/Home/Images/youtube.png" alt=""/> </a></li>
+                </ul>
+
+                <ul id="r1" class="ul">
+                    <li id="list"><a href="">Privacy Policy</a></li>
+                    <li id="list"><a href="">Sitemap</a></li>
+                    <li id="list"><a href="">Join Community</a></li>
+                </ul>
+
+                <p>Copyright © 2022 BeBodywise. All rights reserved</p>
+        </div>
+    </div>
+    
+</div>
+ </div>
+    </div>
+</body>
+</html>
+<script src="./database/database.js"></script>
+<script type="module">
+    
+    import navbar from "/components/navbar.js";
+    var mynav=document.getElementById("navContainer")
+    mynav.innerHTML=navbar();
+
+    
+    let skin = JSON.parse(localStorage.getItem("skinData"));
+    window.addEventListener("load",myLoad)
+    function myLoad(){
+            skin.map(function(elem){
+            
+
+            let img = document.createElement("img");
+            img.src = elem.image;
+           
+
+            let title = document.createElement("h3");
+            title.innerText = elem.title;
+
+            let price = document.createElement("h3");
+            price.innerText = `₹ ${elem.price}`;
+            
+            let res = document.createElement("h3");
+            res.innerText = elem.for;
+
+            let ris = document.createElement("h3");
+            ris.innerText = elem.with;
+
+            let btn = document.createElement("button");
+            btn.innerText = "Add To Cart";
+
+            let div = document.createElement("div");
+
+            div.append(img,title,price,res,ris,btn);
+            let appendDiv = document.getElementById("append");
+            appendDiv.append(div);
+        })
+    }
+
+    let hair = JSON.parse(localStorage.getItem("hairData"));
+    let ha = document.querySelector(".skin");
+    ha.addEventListener("click",myFunction)
+
+    function myFunction(){
+        let appendDiv = document.getElementById("append");
+        appendDiv.innerHTML = null;
+        hair.map(function(elem){
+            
+
+            let img = document.createElement("img");
+            img.src = elem.image;
+           
+
+            let title = document.createElement("h3");
+            title.innerText = elem.title;
+
+            let price = document.createElement("h3");
+            price.innerText = `₹ ${elem.price}`;
+            
+            let res = document.createElement("h3");
+            res.innerText = elem.for;
+
+            let ris = document.createElement("h3");
+            ris.innerText = elem.with;
+
+            let btn = document.createElement("button");
+            btn.innerText = "Add To Cart";
+
+            let div = document.createElement("div");
+
+            div.append(img,title,price,res,ris,btn);
+            let appendDiv = document.getElementById("hairDiv");
+            appendDiv.append(div);
+        })
+    }
+
+    let weight = JSON.parse(localStorage.getItem("weightData"));
+    
+    let we = document.querySelector(".weight");
+    we.addEventListener("click",myFunctionWe)
+    function myFunctionWe(){
+        let skinDiv = document.getElementById("append");
+        skinDiv.innerHTML = null;
+        let hairDiv = document.getElementById("hairDiv");
+        hairDiv.innerHTML = null;
+        weight.map(function(elem){
+            
+
+            let img = document.createElement("img");
+            img.src = elem.image;
+           
+
+            let title = document.createElement("h3");
+            title.innerText = elem.title;
+
+            let price = document.createElement("h3");
+            price.innerText = `₹ ${elem.price}`;
+            
+            let res = document.createElement("h3");
+            res.innerText = elem.for;
+
+            let ris = document.createElement("h3");
+            ris.innerText = elem.with;
+
+            let btn = document.createElement("button");
+            btn.innerText = "Add To Cart";
+
+            let div = document.createElement("div");
+
+            div.append(img,title,price,res,ris,btn);
+            let appendDiv = document.getElementById("weightDiv");
+            appendDiv.append(div);
+        })
+    }
+
+    let pcos = JSON.parse(localStorage.getItem("pcosData"));
+    
+    let pc = document.querySelector(".pcos");
+    pc.addEventListener("click",myFunctionPc)
+    function myFunctionPc(){
+        let skinDiv = document.getElementById("append");
+        skinDiv.innerHTML = null;
+        let hairDiv = document.getElementById("hairDiv");
+        hairDiv.innerHTML = null;
+        let weightDiv = document.getElementById("weightDiv");
+        weightDiv.innerHTML = null;
+        pcos.map(function(elem){
+            
+
+            let img = document.createElement("img");
+            img.src = elem.image;
+           
+
+            let title = document.createElement("h3");
+            title.innerText = elem.title;
+
+            let price = document.createElement("h3");
+            price.innerText = `₹ ${elem.price}`;
+            
+            let res = document.createElement("h3");
+            res.innerText = elem.for;
+
+            let ris = document.createElement("h3");
+            ris.innerText = elem.with;
+
+            let btn = document.createElement("button");
+            btn.innerText = "Add To Cart";
+
+            let div = document.createElement("div");
+
+            div.append(img,title,price,res,ris,btn);
+            let appendDiv = document.getElementById("pcosDiv");
+            appendDiv.append(div);
+        })
+    }
+
+    let feminine = JSON.parse(localStorage.getItem("feminineData"));
+    
+    let fe = document.querySelector(".care");
+    fe.addEventListener("click",myFunctionFe)
+    function myFunctionFe(){
+        let skinDiv = document.getElementById("append");
+        skinDiv.innerHTML = null;
+        let hairDiv = document.getElementById("hairDiv");
+        hairDiv.innerHTML = null;
+        let weightDiv = document.getElementById("weightDiv");
+        weightDiv.innerHTML = null;
+        let pcosDiv = document.getElementById("pcosDiv");
+        pcosDiv.innerHTML = null;
+        feminine.map(function(elem){
+            
+
+            let img = document.createElement("img");
+            img.src = elem.image;
+           
+
+            let title = document.createElement("h3");
+            title.innerText = elem.title;
+
+            let price = document.createElement("h3");
+            price.innerText = `₹ ${elem.price}`;
+            
+            let res = document.createElement("h3");
+            res.innerText = elem.for;
+
+            let ris = document.createElement("h3");
+            ris.innerText = elem.with;
+
+            let btn = document.createElement("button");
+            btn.innerText = "Add To Cart";
+
+            let div = document.createElement("div");
+
+            div.append(img,title,price,res,ris,btn);
+            let appendDiv = document.getElementById("feminineDiv");
+            appendDiv.append(div);
+        })
+    }
+
+
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+    
+
+</script>

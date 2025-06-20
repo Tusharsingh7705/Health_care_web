@@ -1,0 +1,273 @@
+       
+    /* NAVBAR STYLES */
+     body{
+         margin:0%;
+     }
+
+       #navContainer{
+           position:fixed;
+            background-color:  rgb(0,0,0);
+            box-sizing: border-box;
+            padding: 20px;
+            font-family: Avenir,serif;
+            width: 100%;
+            height:70px;
+            
+        }
+        #nav{
+         
+            display: flex;
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #header_logo{
+            text-align:right;
+            font-weight: border;
+        }
+        #logoImage{
+            width: 140px;
+            height: 24px;
+        }
+        #header_menu{
+            display: flex; 
+            box-sizing: border-box;  
+            font-size: 14px;
+            align-items: center;
+            font-family: Avenir,serif;
+            font-weight: bold;
+            
+        }
+        #header_menu>div{
+            margin-right: 20px;
+            color: white; 
+        }
+        #header_menu>div>a{
+            text-decoration: none;
+            color: white;
+        }
+        #header_controls{
+            display: flex;
+            box-sizing: border-box;
+            margin-left: 10px;
+            align-items: center;
+            justify-content: space-evenly;
+           
+        }
+        #icons{
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            font-weight: bold;
+            padding: 10px;
+        }
+        #icons>a>img{
+            width: 100%;
+            height: 100%;
+          
+        }
+
+        #categories{
+            display: flex;
+            overflow: auto;
+            margin-left: 10%;
+            margin-right: 10%;
+            /* margin-top: 20px; */
+            
+            
+        }
+        #categories>.items{
+            margin-top: 20px;
+            margin-right: 8%;
+            width: 30%;
+            height: 30px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 10%;
+            /* border: solid 1px red; */
+        }
+
+        #categories>.items{
+            padding: 5px;
+            font-size: 16px;
+           
+        }
+        .items>a{
+            text-decoration: none;
+        }
+        #categories>.items:nth-child(1){
+            font-size: 16px;
+            background-color: rgb(102, 80, 154);
+
+        }
+        #categories>.items:nth-child(2){
+            font-size: 16px;
+            background-color: rgb(232, 244, 255);
+        }
+        #categories>.items:nth-child(3){
+            font-size: 16px;
+            background-color: rgba(45, 142, 123, 0.1);
+
+        }
+        #categories>.items:nth-child(4){
+            font-size: 16px;
+            color: rgb(232, 102, 105);
+            background-color: rgba(232, 102, 105, 0.1);
+        }
+        #categories>.items:nth-child(5){
+            font-size: 16px;
+            color: rgb(94, 147, 189);
+            background-color: rgba(94, 146, 189, 0.1);
+        }
+        .hair{
+            color: rgb(255, 255, 255);
+        }
+        .skin{
+            color: rgb(25, 100, 171);
+        }
+        .weight{
+            color: rgb(0, 112, 97);
+        }
+        .pcos{
+            color: rgb(232, 102, 105);
+        }
+        .care{
+            color: rgb(94, 147, 189);
+        }
+
+
+        
+        /* FOOTER STYLES */
+
+        #footer_container{
+            width:100%;
+            height:600px;
+                background-color: rgb(0, 0, 0);
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 90px;
+                padding-left: 30px;
+                text-align: center;
+                border:1px solid black;
+        }
+        
+        .box1{
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;   
+             /* border:1px solid white; */
+        }
+        
+        #footer_container .box1{
+            display: inline-block;
+        }
+        
+        #footer_container .box1 ul{
+            display: flex;
+            justify-content: center;
+            margin:20px;
+            padding-top: 15px;
+        
+        }
+        
+        #footer_container .box1 ul li{
+            margin: 0 15px;
+            list-style: disc;
+            color: white;
+            padding: 0 15px;
+        }
+        
+        #footer_container .box1 ul li:first-child{
+            list-style: none;
+        }
+        
+        #footer_container .box1 ul{
+            margin: 0 0 10px;
+        }
+        
+        #footer_container .box1 ul li{
+            margin-bottom:1px;
+        }
+        
+        #ul{
+            margin-bottom: 1px;
+        }
+        
+        #list{
+            display: list-item;
+        }
+        
+        #list a {
+            color: white;
+        }
+        
+        #footer_container .box1 #about{
+            width: 50%;;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            /* border:1px solid white; */
+        }
+        
+        #footer_container .box1 #about ul{
+            display: inline-block;
+        }
+        
+        #footer_container .box1 #about ul li{
+            list-style: none;
+        }
+        
+        #footer_container .box1 #about ul li:first-child{
+        margin: 0 0 20px
+        }
+        
+        #footer_container .box1 #about ul li a{
+            font-size: 16px;
+            list-style: none;
+        
+        }
+        
+        
+        #footer_container .box1 #add{
+            width:100%;
+            /* border:1px solid black; */
+        }
+        
+        #footer_container .box1 #add #add1{
+            width:100%;
+            /* border:1px solid black; */
+        }
+        
+        #footer_container .box1 #add #add1 ul{
+            display: flex;
+            justify-content: center;
+            /* border:1px solid black; */
+        }
+        
+        #footer_container .box1 #add #add1 ul li{
+            margin: 0 30px;
+            list-style: none;
+            /* border:1px solid black; */
+        }
+        
+        #footer_container .box1 #add p{
+            color: white;
+            padding-top: 15px;
+        }
+        
+        /* #image{
+          max-width: 100%;
+          vertical-align: middle;
+          border-style: none;
+        } */
