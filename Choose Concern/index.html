@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Concern</title>
+    <link rel="stylesheet" href="../index.css">
+    <style>
+        .concern-container {
+            width: 70%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .concern-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .concern-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .concern-card:hover {
+            transform: translateY(-5px);
+        }
+        .concern-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .concern-card p {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navContainer">
+        <div id="nav">
+            <div id="header_logo">
+                <a href="../index.html">
+                    <img id="logoImage" src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_800,c_limit/v1606295435/staging/Home/Images/bodywise-logo.png" alt="beBodywise">
+                </a>
+            </div>
+            <div id="header_menu">
+                <div><a href="../BookdoctorConsultation/new.html">Book Doctor Consultation</a></div>
+                <div><a href="../Take Wellness/index.html">Take Wellness Assessment</a></div>
+                <div><a href="index.html">Choose Concern</a></div>
+                <div><a href="../All products/index.html">All Products</a></div>
+                <div><a href="../Refer Earn/index.html">Refer & Earn</a></div>
+            </div>
+            <div id="header_controls">
+                <div id="icons"><a href="../Login Cart/search.html"><img src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_48/v1603950724/staging/Home/Images/u_search.svg" alt=""></a></div>
+                <div id="icons"><a href="../Login Cart/signup.html"><img src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_48/v1603950724/staging/Home/Images/u_user.svg" alt=""></a></div>
+                <div id="icons"><a href="https://api.whatsapp.com/send/?phone=917710096671&text=Hey%21+I+would+like+to+know+more+about+Bodywise.&app_absent=0"><img src="https://res.cloudinary.com/mosaic-wellness/image/upload/f_auto,w_48/v1603950724/staging/Home/Images/WhastApp.svg" alt=""></a></div>
+                <div id="icons"><a href="../Login Cart/cart.html"><img src="https://res.cloudinary.com/mosaic-wellness/image/upload/v1603950724/staging/Home/Images/u_shopping-bag.svg" alt="" width="24px" height="24px"></a></div>
+            </div>
+        </div>   
+    </div>
+
+    <div class="concern-container">
+        <h1>Choose Your Health Concern</h1>
+        <p>Select the area you'd like to focus on for personalized wellness solutions</p>
+        
+        <div class="concern-grid">
+            <div class="concern-card" onclick="selectConcern('hair')">
+                <h3>Hair Care</h3>
+                <p>Hair fall, thinning, and scalp issues</p>
+            </div>
+            <div class="concern-card" onclick="selectConcern('skin')">
+                <h3>Skin Care</h3>
+                <p>Acne, aging, and skin clarity</p>
+            </div>
+            <div class="concern-card" onclick="selectConcern('weight')">
+                <h3>Weight Management</h3>
+                <p>Healthy weight loss and nutrition</p>
+            </div>
+            <div class="concern-card" onclick="selectConcern('pcos')">
+                <h3>PCOS & Hormones</h3>
+                <p>Hormonal balance and period care</p>
+            </div>
+            <div class="concern-card" onclick="selectConcern('uti')">
+                <h3>UTI & Intimate Care</h3>
+                <p>UTI prevention and intimate health</p>
+            </div>
+            <div class="concern-card" onclick="selectConcern('stress')">
+                <h3>Stress & Sleep</h3>
+                <p>Mental wellness and better sleep</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectConcern(concern) {
+            console.log('Selected concern:', concern);
+            // Redirect to relevant products or consultation page
+            window.location.href = '../All products/index.html';
+        }
+    </script>
+</body>
+</html>
