@@ -129,10 +129,10 @@ Health_care_web/
 
 ### 🛠️ **Installation**
 
-1. **Clone the repository**
+1. **Clone** repository
    ```bash
-   git clone https://github.com/yourusername/healthcare-web.git
-   cd healthcare-web
+   git clone https://github.com/Tusharsingh7705/Health_care_web.git
+   cd Health_care_web
    ```
 
 2. **Start local server**
@@ -259,7 +259,7 @@ graph TD
 
 We welcome contributions! Please follow our guidelines:
 
-1. **Fork** the repository
+1. **Fork** repository
 2. **Create** feature branch (`git checkout -b feature/AmazingFeature`)
 3. **Commit** changes (`git commit -m 'Add some AmazingFeature'`)
 4. **Push** to branch (`git push origin feature/AmazingFeature`)
