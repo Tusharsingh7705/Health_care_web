@@ -6,7 +6,7 @@
 
 **A comprehensive healthcare platform providing women's health & wellness solutions**
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)]([https://your-vercel-app.vercel.app](https://health-care-oq021shw6-tusharsingh7705-7393s-projects.vercel.app/))
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)]([https://health-care-oq021shw6-tusharsingh7705-7393s-projects.vercel.app/])
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)](https://github.com/yourusername/healthcare-web)
 
